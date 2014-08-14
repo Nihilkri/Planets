@@ -11,15 +11,16 @@ using System.Windows.Forms;
 namespace Planets {
 	public partial class frmMain : Form {
 		#region Variables
+		#region Program
 		/// <summary>
 		/// Random Number Generator
 		/// </summary>
-		public Random rng = new Random();
+		public static Random rng = new Random();
 		/// <summary>
 		/// fx,fy is the size of the form; fx2,fy2 is half that;
 		/// so that (fx2, fy2) is the center of the form
 		/// </summary>
-		public int fx, fy, fx2, fy2;
+		public static int fx, fy, fx2, fy2;
 		/// <summary>
 		/// the canvas that holds the back buffer
 		/// </summary>
@@ -44,6 +45,17 @@ namespace Planets {
 		/// The finish time for frame timings
 		/// </summary>
 		private TimeSpan ft;
+		#endregion Program
+		#region Game
+		public enum eGS { Title }
+		public static eGS GS = eGS.Title;
+
+		public static List<SpeciesDef> species = new List<SpeciesDef>();
+		public static List<EmpireDef> empires = new List<EmpireDef>();
+		public static List<StarSystemDef> starsystems = new List<StarSystemDef>();
+		public static List<FleetDef> fleets = new List<FleetDef>();
+
+		#endregion Game
 
 		#endregion Variables
 		#region Events
@@ -53,7 +65,14 @@ namespace Planets {
 			gi = new Bitmap(fx, fy); gb = Graphics.FromImage(gi);
 			gf = CreateGraphics(); tim.Tick += tim_Tick;
 
-			tim.Start();
+			empires.Add(new EmpireDef() { name = "Serati" });
+			//empires[0].fleets.Add(new FleetDef());
+			fleets.Add(new FleetDef() { owner = empires[0] });
+			empires[0].name = "Hiserat'na";
+			MessageBox.Show(fleets[0].owner.name);
+
+
+			//tim.Start();
 			Calc(); Draw();
 		}
 		private void Form1_KeyDown(object sender, KeyEventArgs e) {

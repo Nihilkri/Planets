@@ -5,6 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Planets {
-	class EmpireDef {
+	public class EmpireDef {
+		#region Variables
+		public string name;
+		public StarDef homeworld;
+
+		#endregion Variables
+		public EmpireDef() {
+
+
+		}
+
 	}
 }

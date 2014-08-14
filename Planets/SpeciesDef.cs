@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Planets {
-	public class ShipDef {
+	class SpeciesDef {
 		#region Variables
 		public String name;
 		public int id, x, y, z;
 
 		#endregion Variables
-		public ShipDef() {
+		public SpeciesDef() {
 
 
 		}

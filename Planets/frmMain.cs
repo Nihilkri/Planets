@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Stars {
+namespace Planets {
 	public partial class frmMain : Form {
 		#region Variables
 		/// <summary>

@@ -4,27 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stars {
+namespace Planets {
 	/// <summary>
 	/// Class Definition for the stars
 	/// </summary>
 	class StarDef {
 		#region Variables
-		String name;
-		int id, x, y;
+		public String name;
+		public int id, x, y;
 		/// <summary>
 		/// Gravity, Temperature, Radiation
 		/// </summary>
-		int G, T, R;
+		public int G, T, R;
 		/// <summary>
 		/// Surface Ironium, Boranium, Germanium
 		/// </summary>
-		int sI, sB, sG;
+		public int sI, sB, sG;
 		/// <summary>
 		/// Concentrations of Ironium, Boranium, Germanium
 		/// </summary>
-		int cI, cB, cG;
+		public int cI, cB, cG;
 
+		public EmpireDef owner;
+		public ShipDef starbase;
+		public int sbadmg, sbsdmg;
+		public int pop;
+		public int mines, facts, defs, deftype;
+		public int scanner;
 
 		#endregion Variables
 

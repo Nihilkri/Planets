@@ -9,6 +9,7 @@ namespace Planets {
 		#region Variables
 		public String name;
 		public int id, x, y, z;
+		public FleetDef parent;
 
 		#endregion Variables
 		public ShipDef() {

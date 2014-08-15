@@ -10,7 +10,8 @@ namespace Planets {
 		public String name;
 		public int id, x, y, z;
 
-		List<StarDef> stars = new List<StarDef>();
+		public List<StarDef> stars = new List<StarDef>();
+		public List<PlanetDef> planets = new List<PlanetDef>();
 
 
 		#endregion Variables

@@ -9,6 +9,7 @@ namespace Planets {
 		#region Variables
 		public String name;
 		public int id, x, y, z;
+		public StarSystemDef parent;
 
 		/// <summary>
 		/// Gravity, Temperature, Radiation
@@ -26,13 +27,13 @@ namespace Planets {
 		public EmpireDef owner;
 		public ShipDef starbase;
 		public int sbadmg, sbsdmg;
-		public int pop;
+		public Dictionary<SpeciesDef, int> pop = new Dictionary<SpeciesDef, int>();
 		public int mines, facts, defs, deftype;
 		public int scanner;
 
 		#endregion Variables
 		public PlanetDef() {
-
+			
 
 		}
 

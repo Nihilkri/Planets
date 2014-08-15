@@ -11,7 +11,7 @@ namespace Planets {
 		public int id, x, y, z;
 
 		public EmpireDef owner;
-		List<ShipDef> ships = new List<ShipDef>();
+		public List<ShipDef> ships = new List<ShipDef>();
 
 		#endregion Variables
 		public FleetDef() {

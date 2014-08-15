@@ -12,7 +12,7 @@ namespace Planets {
 		#region Variables
 		public String name;
 		public int id, x, y, z;
-
+		public StarSystemDef parent;
 
 		#endregion Variables
 		public StarDef() {

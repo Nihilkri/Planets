@@ -8,7 +8,7 @@ namespace Planets {
 	public class EmpireDef {
 		#region Variables
 		public string name;
-		public StarDef homeworld;
+		public PlanetDef homeworld;
 
 		#endregion Variables
 		public EmpireDef() {
